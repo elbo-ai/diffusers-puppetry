@@ -160,8 +160,8 @@ def _get_task_class(mapping, pipeline_class_name, throw_error_if_not_exist: bool
 
     model_name = get_model(pipeline_class_name)
     print(f"Model name: {model_name} for pipeline: {pipeline_class_name}")
-    
-    if model_name is None and pipeline_class_name == "StableDiffusionHighResFixPipeline":
+
+    if model_name is None and pipeline_class_name == "StableDiffusionHighResFixControlNetPipeline":
         return StableDiffusionHighResFixPipeline
 
     if model_name is not None:
