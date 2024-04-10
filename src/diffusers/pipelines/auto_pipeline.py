@@ -160,7 +160,7 @@ def _get_task_class(mapping, pipeline_class_name, throw_error_if_not_exist: bool
 
     model_name = get_model(pipeline_class_name)
     if model_name is None and pipeline_class_name == "StableDiffusionHighResFixPipeline":
-        return StableDiffusionHighResPipeline
+        return StableDiffusionHighResFixPipeline
 
     if model_name is not None:
         task_class = mapping.get(model_name, None)
