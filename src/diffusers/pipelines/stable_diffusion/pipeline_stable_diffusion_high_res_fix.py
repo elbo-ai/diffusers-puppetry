@@ -17,7 +17,7 @@ from typing import Dict, List
 from transformers import CLIPImageProcessor, CLIPTextModel, CLIPTokenizer, CLIPVisionModelWithProjection
 
 from ...image_processor import VaeImageProcessor
-from ...models import AutoencoderKL, UNet2DConditionModel, UNet2DConditionModelHighResFix
+from ...models import AutoencoderKL, UNet2DConditionModel
 from ...schedulers import KarrasDiffusionSchedulers
 from ...utils import (
     logging,
@@ -25,6 +25,7 @@ from ...utils import (
 from .safety_checker import StableDiffusionSafetyChecker
 from .pipeline_stable_diffusion import StableDiffusionPipeline    
 
+from ...models.unets.unet_2d_condition_high_res_fix import UNet2DConditionModelHighResFix
 
 logger = logging.get_logger(__name__)  # pylint: disable=invalid-name
 

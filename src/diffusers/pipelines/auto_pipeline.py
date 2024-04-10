@@ -51,8 +51,9 @@ from .stable_diffusion import (
     StableDiffusionImg2ImgPipeline,
     StableDiffusionInpaintPipeline,
     StableDiffusionPipeline,
-    StableDiffusionHighResPipeline,
 )
+from .stable_diffusion.pipeline_stable_diffusion_high_res_fix import StableDiffusionHighResFixPipeline
+
 from .stable_diffusion_xl import (
     StableDiffusionXLImg2ImgPipeline,
     StableDiffusionXLInpaintPipeline,
@@ -65,7 +66,7 @@ AUTO_TEXT2IMAGE_PIPELINES_MAPPING = OrderedDict(
     [
         ("stable-diffusion", StableDiffusionPipeline),
         ("stable-diffusion-xl", StableDiffusionXLPipeline),
-        ("stable-diffusion-high-res", StableDiffusionHighResPipeline),
+        ("stable-diffusion-high-res", StableDiffusionHighResFixPipeline),
         ("if", IFPipeline),
         ("kandinsky", KandinskyCombinedPipeline),
         ("kandinsky22", KandinskyV22CombinedPipeline),
